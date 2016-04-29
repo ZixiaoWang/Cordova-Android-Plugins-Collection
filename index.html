@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="./css/ios.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/animation.css">
+    </head>
+    <body ng-app="app" ng-controller="myApp">
+        
+        <section class="left" ng-init="test=true">
+            <bar-group>
+                <link-bar icon="'./icons/gear.png'" href="'#device'">About Devices</link-bar>
+                <link-bar href="'#geolocation'">Geolocation</link-bar>
+                <link-bar href="'#dialogs'">Dialogs</link-bar>
+                <link-bar href="'#globalization'">Globalization</link-bar>
+                <link-bar href="'#motion'">Motions</link-bar>
+            </bar-group>
+            <div class="after-bar">Device related plugins</div>
+            
+            <bar-group>
+                <link-bar icon="'./icons/wifi.png'" href="'#networks'">Networks</link-bar>
+                <link-bar href="'#contact'">Contacts</link-bar>
+                <link-bar href="'#media'">Media</link-bar>
+                <link-bar href="'#camera'">Camera</link-bar>
+                <link-bar href="'#vibration'">Vibration</link-bar>
+            </bar-group>
+            <div class="after-bar">In-device app related plugins</div>
+            
+            
+            <bar-group>
+                <link-bar href="'#contentsync'">Content Synchornation</link-bar>
+                <link-bar href="'#nativeStorage'">Native Storage</link-bar> 
+            </bar-group>
+        </section>
+        
+        <div ng-view></div>
+        
+        <div class="nav">
+            <div class="bar nav-bar left-nav">
+                <div class="bar-title">Settings</div>
+            </div>
+            <div class="bar nav-bar right-nav">
+                <div class="bar-title">{{section}}</div>
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="./lib/ionic/js/angular/angular-route.min.js"></script>
+    <script src="./js/main.js"></script>
+</html>
