@@ -1,0 +1,28 @@
+<section class="right">
+    <bar-table-group>
+        <switch-bar id="'SPI1'" ng-model="scope.showPluginInfo" scope="scope">Show Plugin Info</switch-bar>
+    </bar-table-group>
+    
+    <div class="tog" ng-class="{'toggle-up':!showPluginInfo}">
+        <div class="pre-bar">Plugin Information</div>
+        <bar-table-group>
+            <text-bar status="'device'">Plugin Name</text-bar>
+            <text-bar status="'1.1.2'">Version</text-bar>    
+        </bar-table-group>
+        <div class="after-bar">
+            This plugin defines a global device object, which describes the device's hardware and software. Although the object is in the global scope, it is not available until after the deviceready event.
+        </div>
+    </div>
+    
+    <div class="pre-bar">Device Information</div>
+    <bar-table-group>
+        <text-bar status="d.cordova">Cordova</text-bar>    
+        <text-bar status="d.model">Model</text-bar>    
+        <text-bar status="d.platform">Platform</text-bar>    
+        <text-bar status="d.uuid">UUID</text-bar>    
+        <text-bar status="d.version">Version</text-bar>    
+        <text-bar status="d.manufacturer">Manufaturer</text-bar>    
+        <text-bar status="d.isVirtual">Is Virtual</text-bar>    
+        <text-bar status="d.serial">Serial</text-bar>   
+    </bar-table-group>
+</section>
