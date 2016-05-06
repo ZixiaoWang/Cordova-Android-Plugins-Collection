@@ -1,0 +1,25 @@
+<section class="right">
+    <bar-table-group>
+        <switch-bar id="'SPI1'" ng-model="scope.showPluginInfo" scope="scope">Show Plugin Info</switch-bar>
+    </bar-table-group>
+    
+    <div class="tog" ng-class="{'toggle-up':!showPluginInfo}">
+        <div class="pre-bar">Plugin Information</div>
+        <bar-table-group>
+            <text-bar status="'dialogs'">Plugin Name</text-bar>
+            <text-bar status="'1.2.1'">Version</text-bar>    
+        </bar-table-group>
+        <div class="after-bar">
+            This plugin provides access to some native dialog UI elements via a <code>global navigator.notification</code> object.
+            Although the object is attached to the global scoped <code>navigator</code>, it is not available until after the <code>deviceready</code> event.
+        </div>
+    </div>
+    
+    <div class="pre-bar">Device Information</div>
+    <bar-table-group>
+        <text-bar status="d.alert" ng-click="onAlert()">Alert</text-bar>    
+        <text-bar status="d.confirm" ng-click="onConfirm()">Confirm</text-bar>    
+        <text-bar status="d.prompt" ng-click="onPrompt()">Prompt</text-bar>    
+        <text-bar status="d.beep" ng-click="onBeep()">Beep</text-bar> 
+    </bar-table-group>
+</section>

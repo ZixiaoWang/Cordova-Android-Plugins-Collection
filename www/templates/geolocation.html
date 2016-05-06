@@ -1,0 +1,36 @@
+<section class="right">
+    <bar-table-group>
+        <switch-bar id="'SPI1'" ng-model="scope.showPluginInfo" scope="scope">Show Plugin Info</switch-bar>
+    </bar-table-group>
+    
+    <div class="tog" ng-class="{'toggle-up':!showPluginInfo}">
+        <div class="pre-bar">Plugin Information</div>
+        <bar-table-group>
+            <text-bar status="'geolocation'">Plugin Name</text-bar>
+            <text-bar status="'2.2.0'">Version</text-bar>    
+        </bar-table-group>
+        <div class="after-bar">
+            This plugin provides information about the device's location, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. There is no guarantee that the API returns the device's actual location.
+        </div>
+    </div>
+    
+    <div class="after-bar" style="color:red;" ng-if="onLoadError">
+        {{onLoadError}}
+    </div>
+    
+    <div>
+        <div class="pre-bar">Geo Location Information</div>
+        <bar-table-group>
+            <text-bar status="g.latitude">Latitude</text-bar>    
+            <text-bar status="g.longitude">Longitude</text-bar>    
+            <text-bar status="g.altitude">Altitude</text-bar>    
+            <text-bar status="g.accuracy">Accuracy</text-bar>    
+            <text-bar status="g.altitudeAccuracy">Altitude Accuracy</text-bar>    
+            <text-bar status="g.heading">Heading</text-bar>    
+            <text-bar status="g.speed">Speed</text-bar>    
+            <text-bar status="g.timestamp">Timestamp</text-bar>   
+        </bar-table-group>
+    </div>
+    
+    {{g.latitude}}-{{g.longitude}}
+</section>

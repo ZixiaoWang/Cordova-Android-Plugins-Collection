@@ -1,0 +1,13 @@
+.tog{
+    overflow: hidden;
+    max-height: 100vh;
+    -webkit-transition: max-height .3s ease-in-out;
+    -moz-transition: max-height .3s ease-in-out;
+    transition: max-height .3s ease-in-out;
+}
+.toggle-up{
+    max-height: 0px;
+}
+.toggle-down{
+    max-height: 100vh;
+}

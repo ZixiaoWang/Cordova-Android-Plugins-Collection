@@ -1,0 +1,29 @@
+<section class="right">
+    <bar-table-group>
+        <switch-bar id="'SPI1'" ng-model="scope.showPluginInfo" scope="scope">Show Plugin Info</switch-bar>
+    </bar-table-group>
+    
+    <div class="tog" ng-class="{'toggle-up':!showPluginInfo}">
+        <div class="pre-bar">Plugin Information</div>
+        <bar-table-group>
+            <text-bar status="'Motion'">Plugin Name</text-bar>
+            <text-bar status="'1.2.1'">Version</text-bar>    
+        </bar-table-group>
+        <div class="after-bar">
+            This plugin provides access to the device's accelerometer. The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation, in three dimensions along the x, y, and z axis.
+        </div>
+    </div>
+    
+    <div class="after-bar" style="color:red;" ng-if="onLoadError">
+        {{onLoadError}}
+    </div>
+    
+    <div>
+        <div class="pre-bar">Device Motion Information</div>
+        <div class="bar-table-group">
+            <div style="height:300px; background-color:white; position:relative; border-radius:4px;">
+                <div style="width:20px; height:20px; position:absolute; top:50%; left:50%; margin:-10px 0px 0px -10px; border-radius:50%; border:2px solid #CCC;" id="ball"></div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,128 @@
+@font-face{ font-family: 'SSF'; src:url("../fonts/SSFthin.ttf"); }
+body{margin: 0px; background-color: rgb(245,245,245); font-family: SSF; font-weight: 700;}
+section{box-sizing: border-box; padding-top: 44px; overflow-y: auto;}
+.left{ width: 39%; float: left; border-right: 1px solid #BBB; box-sizing: border-box; height: 100vh;} 
+.right { width: 61%; float: left; height: 100vh;}
+
+.bar-group{width: 100%; margin-top: 35px; background-color: white; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC;}
+.bar-group .bar-status>a{display: none;}
+.bar-group>.bar:last-of-type>.bar-content,
+.bar-group>.bar:last-of-type>.bar-status{ border-bottom: none; }
+.bar-table-group{width:initial; margin: 35px 20px 0px 20px; border: 1px solid #CCC; border-radius: 5px;}
+.bar-table-group>.bar:first-of-type{border-radius: 10px 10px 0px 0px 10px;}
+.bar-table-group .bar-status>a{display: inline-flex;}
+.pre-bar{margin: 35px 28px -35px 28px; line-height: 34px; color: #666;}
+.after-bar{margin: 7px 28px 0px 28px; line-height: 20px; color: #666;}
+
+.bar{width: 100%; min-height: 43px; display: flex; position: relative; }
+.bar>.bar-title{
+        width: 100%;
+        height: 44px;
+        text-align: center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+}
+
+.search-bar{ padding: 8px; background-color: #CAC9CF; box-sizing: border-box; margin-bottom: 35px;}
+.searchbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.searchbox>.search, .searchbox>.close{display: flex; align-items: center; padding: 0px 8px; background-color: white; display: none; color: #8E8D95; }
+.searchbox>.search{ border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+.searchbox>.close{ border-top-right-radius: 4px; border-bottom-right-radius: 4px;}
+.searchbox>input{ border: none; width:100%; border-radius: 4px; padding: 4px; text-align: center; }
+.searchbox>input:focus{ outline: none; text-align: left;}
+.bar-icon{                
+    width: 29px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+}
+.bar-icon>img{width: 29px; height: 29px; display: block;}
+.bar-content{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 15px;
+    border-bottom: 1px solid #CCC;
+}
+.bar-icon+.bar-content{ padding-left: 0px; }
+.bar-status{
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 15px;
+    border-bottom: 1px solid #CCC;
+    color:#CCC;
+}
+
+input.switch{
+    display: none;
+}
+input[type="checkbox"].switch+label{
+    width: 51px;
+    height: 32px;
+    display: inline-flex;
+    background-color: white;
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    align-items:center;
+    border: 1px solid #EEE;
+    position: relative;
+    
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: lefbackground-color .3s ease;
+    transition: background-color .3s ease;
+}
+input[type="checkbox"].switch+label::before{
+    content: '';
+    width: 26px;
+    height: 26px;
+    left: 2px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px #CCC;
+    position: absolute;
+    top: 2px;
+    
+    -webkit-transition: left .3s ease;
+    -moz-transition: left .3s ease;
+    transition: left .3s ease;
+}
+input[type="checkbox"]:checked.switch+label{
+    background-color: rgb(77,215,101);
+}
+input[type="checkbox"]:checked.switch+label::before{
+    left: 21px;
+}
+
+.nav{
+    width:100%;
+    height: 44px;
+    position: fixed;
+    top: 0px; left: 0px;
+}
+.nav-bar{
+    height: 44px;
+    display: inline-block; 
+    background-color: #F9F9F9; 
+    border-bottom: 1px solid #CCC; 
+    float: left;
+    box-sizing: border-box;
+}
+.nav>.nav-bar:first-of-type{width: 39%; border-right: 1px solid #CCC;}
+.nav>.nav-bar:nth-of-type(2){width: 61%;}
+.bar.nav-bar>a{line-height: 44px; text-decoration: none; color: blue; padding: 0px 8px;}
+.bar.nav-bar>.left-anchor{ float: left; margin-right: 8px; }
+.bar.nav-bar>.right-anchor{ float: right; margin-left: 8px; }
+.bar>.bar-status>a{padding-left: 15px;}
